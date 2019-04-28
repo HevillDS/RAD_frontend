@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  background-color: rgb(237,216, 99);
+  font-family: 'AvantGardeGothicC-Bold';
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+header {
+  margin: 0; 
+  padding: 0;
+  background-color: rgb(237,216, 99);
+  display: -webkit-flex; 
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none; 
+  color: #fff;
+  font-size: 1.2em;
+  font-family: 'AvantGardeGothicC-Bold';
+  display: -webkit-flex; 
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+}
+
+nav input {
+  border-style: none;
+  border-bottom-style: solid;
+  background-color: rgb(237,216, 99);
+}
+
+nav img {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+nav ul li {
+  padding: 1em;
+  margin: 0.5em;
+}
+
+nav ul li:first-child {
+  font-size: 2em;
+}
+
+nav ul a {
+  color: #000;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+main form {
+  margin-top: 2em;
+  height: 30em;
+  width: 30em;
+  background-color: rgba(208, 189, 90, 0.7);
+  border-style: solid;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+form input {
+  width: 20em;
+  height: 3em;
+  border-style: none;
+  border-bottom-style: solid;
+}
+
+input::-webkit-input-placeholder  { color:#000; }
+input::-moz-placeholder           { color:#000; }
+input::-moz-placeholder           { color:#000; }
+input::-ms-input-placeholder      { color:#000; }
+
+main section:first-child form input:last-child {
+  width: 15em;
+  height: 3em;
+  background-color: #4569E1;
+  font-family: 'AvantGardeGothicC-Bold';
+  font-size: 1.2em;
+  color: #fff;
+  border-radius: 0.3em;
+}
+
+main section form input:last-child {
+  width: 15em;
+  height: 3em;
+  background-color: #4169E1;
+  font-family: 'AvantGardeGothicC-Bold';
+  font-size: 1.2em;
+  color: #fff;
+  border-radius: 0.3em;
+}
+
+form article {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+form img {
+  width: 3em;
+  height: 3em;
+}
+
+main section:nth-child(2) img {
+  width: 8em;
+  height: 11em;
+}
+
+footer {
+  margin-top: 4em;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: center;
+  align-content: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-content: center;
+  align-content: center;
+}
+
+footer h1 {
+  font-size: 2em;
+}
+
+footer ul {
+  list-style-type: none; 
+  color: #fff;
+  font-size: 1.5em;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+footer a {
+  color: #000;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #696969;
+  text-decoration: none;
+}
+
+footer img {
+  width: 6.8em;
+  height: 6.6em;
+  margin-bottom: 1em;
+  margin-left: 0.2em;
+  padding: 1em;
+}
+
+@media only screen and (max-device-width: 768px) {
+  main form {
+    margin-top: 2em;
+    height: 30em;
+    width: 18.5em;
+    background-color: rgba(208, 189, 90, 0.7);
+    border-style: solid;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  footer section { 
+    margin-left: 1.2em;
+  }
+
+  footer img {
+    width: 3.3em;
+    height: 3em;
+    margin-bottom: 1em;
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Вход/Регистрация</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/reg.css">
+  <link rel="shortcut icon" href="img/logo/logo.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">RollAllDay</a></li>
+        <li><a href="error.html">|Форум|</a></li>
+        <li><a href="error.html">|Барахолка|</a></li>
+        <li><a href="error.html">|Мануалы|</a></li>
+        <li><a href="error.html">|Статьи|</a></li>
+        <li><a href="error.html">|Новости|</a></li>
+        <li><a href="error.html">|История|</a></li>
+        <li><a href="error.html">|Медиа|</a></li>
+        <li><a href="error.html">|Карта спотов|</a></li>
+        <li><a href="reg.html">|Вход/Регистрация|</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <form action="be.php" method="post">
+        <h1>Авторизация</h1>
+        <article>
+          <a href="#"><img src="img/logo/facebook.png" alt="FACEBOOK_logo"></a>
+          <a href="#"><img src="img/logo/google.png" alt="GOOGLE_logo"></a>
+          <a href="#"><img src="img/logo/vk.png" alt="VK_logo"></a>
+        </article>   
+        <input type="text" name="login" placeholder="ЛОГИН" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
+        <input type="password" name="password" placeholder="ПАРОЛЬ" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+        <input type="submit" name="vhod" required>     
+      </form>
+    </section>
+    
+    <section>
+      <form action="be.php" method="post">
+        <h1>Регистрация</h1>
+        <input type="text" name="login" placeholder="ЛОГИН" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"> 
+        <input type="email" name="pochta" placeholder="ПОЧТА" required pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$">
+        <input type="password" name="password" placeholder="ПАРОЛЬ" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+        <input type="submit" name="vhod" placeholder="Зарегистрироваться" required>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <section>
+      <h1>Полезные ресурсы:</h1>
+      <ul>
+        <li><a href="http://hellride.ru" target="_blank">hellride.ru</a></li>
+        <li><a href="http://veloremont.ru" target="_blank">veloremont.ru</a></li>
+        <li><a href="http://mtbstickers.ru" target="_blank">mtbstickers.ru</a></li>
+      </ul>
+    </section>
+    <section>
+      <h1>RollAllDay в других соцсетях, присоединяйся, райдер!</h1>
+      <a href="#" target="_blank"><img src="img/logo/facebook.png" alt="FACEBOOKlogo"></a>
+      <a href="https://www.youtube.com/user/RollAllDayFF" target="_blank"><img src="img/logo/youtube.png" alt="YTlogo"></a>
+      <a href="#" target="_blank"><img src="img/logo/telegram.png" alt="TELEGRAMlogo"></a>
+      <a href="#" target="_blank"><img src="img/logo/instagram.png" alt="INSTAGRAMlogo"></a>
+      <a href="#" target="_blank"><img src="img/logo/twitter.png" alt="TWITTERlogo"></a>
+      <a href="https://vk.com/rollallday" target="_blank"><img src="img/logo/vk.png" alt="VKlogo"></a>
+    </section>
+  </footer>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/javascript.js"></script>
+</body>
+</html>

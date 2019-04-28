@@ -1,0 +1,30 @@
+$communityColor: #fff;
+$communityFontBold: 'Yanone Kaffeesatz';
+$communityFontNormal: 'Yanone Kaffeesatz';
+
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  src: url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.eot');
+  src: url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.woff2') format('woff2'),
+      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.woff') format('woff'),
+      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.ttf') format('truetype'),
+      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.svg#YanoneKaffeesatz-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz Bold';
+  src: url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.eot');
+  src: url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.woff2') format('woff2'),
+      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.woff') format('woff'),
+      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.ttf') format('truetype'),
+      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.svg#YanoneKaffeesatz-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
