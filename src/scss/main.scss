@@ -1,4 +1,6 @@
 @import 'colorsAndFonts.scss';
+@import 'animate.css';
+@import 'fm.revealator.jquery.min.css';
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
     display: block;
@@ -24,7 +26,7 @@ header {
   margin: 0 0 0 0; 
   padding: 0;
   background-color: #f1db5e;
-  font-family: $communityFontBold;
+  font-family: $communityFont;
   display: -webkit-flex; 
   display: flex;
   -webkit-flex-direction: row;
@@ -36,24 +38,13 @@ header {
 nav ul {
   list-style-type: none; 
   color: #fff;
-  font-family: $communityFontBold;
+  font-family: $communityFont;
   display: -webkit-flex; 
   display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-align-items: baseline;
   align-items: baseline;
-}
-
-nav input {
-  border-style: none;
-  border-bottom-style: solid;
-  background-color: $communityColor;
-}
-
-nav img {
-  width: 1.5em;
-  height: 1.5em;
 }
 
 nav ul li {
@@ -76,7 +67,7 @@ nav ul a {
   display: -webkit-flex;
   display: flex;
   background-color: $communityColor;
-  font-family: $communityFontNormal;
+  font-family: $communityFont;
   -webkit-flex-direction: column;
   flex-direction: column;
 }
@@ -100,7 +91,6 @@ nav ul a {
   position: absolute;
   font-size: 3em;
   border-radius: 0.2em;
-  background-color: $communityColor;
   padding: 1.4em;
   margin-left: 0.3em;
   height: 10em;
@@ -144,19 +134,18 @@ nav ul a {
 
 .index_page section:nth-child(2) article h1 {
   font-size: 3em;
+  font-family: $communityFont;
+  font-weight: bold;
   margin-top: 0.2em;
   margin-bottom: 0;
- }
-
- .index_page section:nth-child(2) article hr {
-   size: 2em;
-   color: #000;
  }
 
 .index_page section:nth-child(2) article p {
   margin-top: 0.3em;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
+  font-family: $communityFont;
+  font-weight: 200;
  }
 
 
@@ -214,7 +203,7 @@ nav ul a {
 
 footer {
   display: -webkit-flex;
-  font-family: $communityFontBold;
+  font-family: $communityFont;
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
@@ -268,7 +257,7 @@ footer img {
   nav ul {
     list-style-type: none; 
     color: #fff;
-    font-family: $communityFontBold;
+    font-family: $communityFont;
     display: -webkit-flex; 
     display: flex;
     -webkit-flex-wrap: wrap;
@@ -319,7 +308,7 @@ footer img {
     margin-top: 13em;
     font-size: 1em;
     width: 16em;
-    background-color: rgba(237,216, 99, 0.7);
+
     padding: 1.4em;
     margin-left: 0.3em;
   }

@@ -9,7 +9,12 @@ setInterval(function(){
  .appendTo('#slider');
 }, 3000);
 
-
-// $(function(){
-//     let navigation = $('#nav-main').okayNav();
-//    });
+$(document).ready(function() {
+    $('li.animated').hover(
+     function() {
+      $(this).addClass('bounce'); // Добавляем класс bounce
+     },
+     function() {
+      $(this).removeClass('bounce'); // Убираем класс
+     }
+    )})

@@ -1,29 +1,53 @@
 $communityColor: #fff;
-$communityFontBold: 'Yanone Kaffeesatz';
-$communityFontNormal: 'Yanone Kaffeesatz';
+
+$communityFont: 'Yanone Kaffeesatz';
 
 
 @font-face {
   font-family: 'Yanone Kaffeesatz';
-  src: url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.eot');
-  src: url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.woff2') format('woff2'),
-      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.woff') format('woff'),
-      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.ttf') format('truetype'),
-      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.svg#YanoneKaffeesatz-Regular') format('svg');
+  src: url('../fonts/Yanone_Kaffeesatz/Regular/YanoneKaffeesatz-Regular.eot');
+  src: url('../fonts/Yanone_Kaffeesatz/Regular/YanoneKaffeesatz-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Yanone_Kaffeesatz/Regular/YanoneKaffeesatz-Regular.woff2') format('woff2'),
+      url('../fonts/Yanone_Kaffeesatz/Regular/YanoneKaffeesatz-Regular.woff') format('woff'),
+      url('../fonts/Yanone_Kaffeesatz/Regular/YanoneKaffeesatz-Regular.ttf') format('truetype'),
+      url('../fonts/Yanone_Kaffeesatz/Regular/YanoneKaffeesatz-Regular.svg#YanoneKaffeesatz-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Yanone Kaffeesatz Bold';
-  src: url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.eot');
-  src: url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.woff2') format('woff2'),
-      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.woff') format('woff'),
-      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.ttf') format('truetype'),
-      url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.svg#YanoneKaffeesatz-Regular') format('svg');
-  font-weight: normal;
+  font-family: 'Yanone Kaffeesatz';
+  src: url('../fonts/Yanone_Kaffeesatz/Bold/YanoneKaffeesatz-Bold.eot');
+  src: url('../fonts/Yanone_Kaffeesatz/Bold/YanoneKaffeesatz-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Yanone_Kaffeesatz/Bold/YanoneKaffeesatz-Bold.woff2') format('woff2'),
+      url('../fonts/Yanone_Kaffeesatz/Bold/YanoneKaffeesatz-Bold.woff') format('woff'),
+      url('../fonts/Yanone_Kaffeesatz/Bold/YanoneKaffeesatz-Bold.ttf') format('truetype'),
+      url('../fonts/Yanone_Kaffeesatz/Bold/YanoneKaffeesatz-Bold.svg#YanoneKaffeesatz-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  src: url('../fonts/Yanone_Kaffeesatz/Light/YanoneKaffeesatz-Light.eot');
+  src: url('../fonts/Yanone_Kaffeesatz/Light/YanoneKaffeesatz-Light.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Yanone_Kaffeesatz/Light/YanoneKaffeesatz-Light.woff2') format('woff2'),
+      url('../fonts/Yanone_Kaffeesatz/Light/YanoneKaffeesatz-Light.woff') format('woff'),
+      url('../fonts/Yanone_Kaffeesatz/Light/YanoneKaffeesatz-Light.ttf') format('truetype'),
+      url('../fonts/Yanone_Kaffeesatz/Light/YanoneKaffeesatz-Light.svg#YanoneKaffeesatz-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  src: url('../fonts/Yanone_Kaffeesatz/ExtraLight/YanoneKaffeesatz-ExtraLight.eot');
+  src: url('../fonts/Yanone_Kaffeesatz/ExtraLight/YanoneKaffeesatz-ExtraLight.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Yanone_Kaffeesatz/ExtraLight/YanoneKaffeesatz-ExtraLight.woff2') format('woff2'),
+      url('../fonts/Yanone_Kaffeesatz/ExtraLight/YanoneKaffeesatz-ExtraLight.woff') format('woff'),
+      url('../fonts/Yanone_Kaffeesatz/ExtraLight/YanoneKaffeesatz-ExtraLight.ttf') format('truetype'),
+      url('../fonts/Yanone_Kaffeesatz/ExtraLight/YanoneKaffeesatz-ExtraLight.svg#YanoneKaffeesatz-ExtraLight') format('svg');
+  font-weight: 200;
   font-style: normal;
 }
 
