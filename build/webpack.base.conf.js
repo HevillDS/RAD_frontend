@@ -74,12 +74,6 @@ module.exports = {
           test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
           use: [
             {
-                loader: 'file-loader?name=./assets/fonts/[name].[ext]'
-            },
-            {
-                loader: 'file-loader?name=./assets/fonts/[name].[ext]'
-            },
-            {
               loader: 'url-loader'
           }
         ]
