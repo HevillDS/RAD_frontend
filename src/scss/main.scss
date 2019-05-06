@@ -1,9 +1,8 @@
 @import 'colorsAndFonts.scss';
 @import 'animate.css';
-@import 'fm.revealator.jquery.min.css';
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-    display: block;
+  display: block;
 }
 body {
   margin: 0;
@@ -25,6 +24,7 @@ header {
   z-index: 1;
   margin: 0 0 0 0; 
   padding: 0;
+  height: 4em;
   background-color: #f1db5e;
   font-family: $communityFont;
   display: -webkit-flex; 
@@ -37,6 +37,7 @@ header {
 
 nav ul {
   list-style-type: none; 
+  margin: 0;
   color: #fff;
   font-family: $communityFont;
   display: -webkit-flex; 
@@ -63,7 +64,7 @@ nav ul a {
 }
 
 .index_page {
-  margin-top: 6em; 
+  margin-top: 4em; 
   display: -webkit-flex;
   display: flex;
   background-color: $communityColor;
@@ -109,6 +110,10 @@ nav ul a {
   -webkit-align-items: center;
   align-items: center;
   align-content: center;
+}
+
+.index_page section:nth-child(2) h1 {
+  margin-top: 0;
 }
 
 .index_page section:nth-child(2) article {
@@ -164,78 +169,56 @@ nav ul a {
 
 .index_page section:last-child {
   display: flex;
-  display: -webkit-flex;
-  -webkit-flex-basis: 55em;
-  flex-basis: 60em;
-  -webkit-align-content: flex-end;
-  align-content: flex-end;
-  -webkit-flex-direction: column;
+  flex-direction: row;
+  margin-bottom: 3em;
+}
+
+.index_page section:last-child div:first-child {
+  background-color: #f1db5e;
+  display: flex;
   flex-direction: column;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
 }
 
-#slider {
- position: relative;
- width: 35em;
- margin-left: 2em;
- margin-bottom: 10em;
-}
-
-#slider img {
- position: absolute;
- background-color: #f3f4ef; 
- border: 1px solid #dedede; 
- padding: 5px;
- top: 0;
- left: 0;
- max-width: 100%;
- height: auto;
+.index_page section:last-child div:last-child img {
+  width: 70em;
+  height: 33em;
 }
 
 .index_page section:last-child p {
   font-size: 2.5em;
   text-align: center;
-  background-color: rgba(237,216, 99, 0.9);
 }
 
 footer {
   display: -webkit-flex;
   font-family: $communityFont;
   display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-content: center;
-  align-content: center;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: baseline;
-  align-items: baseline;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-  -webkit-align-content: center;
-  align-content: center;
-}
-
-footer h1 {
-  font-size: 2em;
-}
-
-footer ul {
-  list-style-type: none; 
-  color: #fff;
-  font-size: 1.5em;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
   flex-direction: column;
-  -webkit-justify-content: center;
-  justify-content: center;
+  align-items: center;
+
 }
 
-footer a {
+footer section:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer section:first-child h1 {
+  font-size: 5em;
+  margin: 0;
+}
+
+footer section:last-child {
+  display: flex;
+  flex-direction: row;
+}
+
+footer section:first-child a {
+  font-size: 3em;
   color: #000;
   text-decoration: none;
 }
@@ -246,14 +229,33 @@ footer a:hover {
 }
 
 footer img {
-  width: 6.8em;
-  height: 6.6em;
-  margin-bottom: 1em;
-  margin-left: 0.2em;
-  padding: 1em;
+  width: 6em;
+  height: 6em;
+  padding: 2.5em;
 }
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 1435px) {
+  .index_page section:first-child {
+    display: -webkit-flex;
+    display: flex;
+    flex-basis: 45em;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-content: center;
+    align-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+  }
+
+  .index_page section:first-child p {
+    background-color: rgba($color: #f1db5e, $alpha: 0.7);
+    height: 3em;
+  }
+}
+
+@media only screen and (max-device-width: 780px) {
   nav ul {
     list-style-type: none; 
     color: #fff;
@@ -347,20 +349,27 @@ footer img {
     align-items: flex-end;
   }
 
-  #slider {
-   position: relative;
-   width: 18em;
-   margin: 0 auto;
-   margin-top: 6em;
+
+  footer section:first-child h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+  
+  footer section:first-child a {
+    font-size: 2em;
+    color: #000;
+    text-decoration: none;
   }
 
-  footer section { 
-    margin-left: 1.3em;
+  footer section:last-child {
+    margin-top: 1em;
   }
+
 
   footer img {
-    width: 3.3em;
+    width: 3em;
     height: 3em;
+    padding: 0.5em;
     margin-bottom: 1em;
-  }
+  } 
 }
