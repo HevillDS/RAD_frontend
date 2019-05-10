@@ -1,10 +1,9 @@
 const path = require("path");
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const JQuerry = require('jquery');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader')
+const webpack = require('webpack');
 
 
 const PATHS = {
@@ -92,7 +91,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.js'
+      'vue$': 'vue/dist/vue.js',
+      'bxSlider': 'node_modules/bxslider/dist'
     }
   },
   plugins: [
@@ -136,5 +136,10 @@ module.exports = {
         from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts`
       }
     ]),
+
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    })
   ]
 }

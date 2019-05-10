@@ -1,12 +1,9 @@
 @import 'colorsAndFonts.scss';
 @import 'animate.css';
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+@import 'headerAndFooter.scss';
+
 body {
   margin: 0;
-
 }
 
 .index__body {
@@ -129,7 +126,6 @@ nav ul a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
   margin-bottom: 2em;
 }
 
@@ -138,7 +134,7 @@ nav ul a {
 }
 
 .index_page section:nth-child(2) article h1 {
-  font-size: 3em;
+  font-size: 2.3em;
   font-family: $communityFont;
   font-weight: bold;
   margin-top: 0.2em;
@@ -200,6 +196,11 @@ nav ul a {
 .index_page section:last-child div:last-child img {
   width: 60em;
   height: 29em;
+}
+
+.index_page section:last-child div:last-child ul {
+  padding: 0;
+  margin: 0;
 }
 
 footer {
