@@ -111,18 +111,18 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: `${PATHS.src}/reg.html`,
-      filename: './reg.html'
+      template: `${PATHS.src}/signUp.html`,
+      filename: './signUp.html'
     }),
 
     new HtmlWebpackPlugin({
-      template: `${PATHS.src}/interactive.html`,
-      filename: './interactive.html'
+      template: `${PATHS.src}/signIn.html`,
+      filename: './signIn.html'
     }),
 
     new HtmlWebpackPlugin({
-      template: `${PATHS.src}/article.html`,
-      filename: './article.html'
+      template: `${PATHS.src}/publication.html`,
+      filename: './publication.html'
     }),
 
     new CopyWebpackPlugin([

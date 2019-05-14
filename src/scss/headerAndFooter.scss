@@ -1,55 +1,46 @@
-.index__body {
-  margin: 0;  
-  background-color: $communityColor;
-  display: -webkit-flex;
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0em;
+  margin: 0 0 0 0; 
+  padding: 0;
+  height: 4em;
+  background-color: #f1db5e;
+  font-family: $communityFont;
+  display: -webkit-flex; 
   display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
-header {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    margin: 0 0 0 0; 
-    padding: 0;
-    height: 4em;
-    background-color: #f1db5e;
-    font-family: $communityFont;
-    display: -webkit-flex; 
-    display: flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    -webkit-justify-content: center;
-    justify-content: center;
-  }
+nav ul {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: $communityFont;
+  display: -webkit-flex; 
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+}
+
+nav ul li {
+  margin: 0.5em;
+  font-size: 1.5em;
+}
+
+nav ul li:first-child {
+  font-size: 2em;
+}
+
+nav ul a {
+  color: #000;
+  text-decoration: none;
   
-  nav ul {
-    list-style-type: none; 
-    margin: 0;
-    color: #fff;
-    font-family: $communityFont;
-    display: -webkit-flex; 
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-align-items: baseline;
-    align-items: baseline;
-  }
-  
-  nav ul li {
-    margin: 0.5em;
-    font-size: 1.5em;
-  }
-  
-  nav ul li:first-child {
-    font-size: 2em;
-  }
-  
-  nav ul a {
-    color: #000;
-    text-decoration: none;
-    
-  }
-  
+}
