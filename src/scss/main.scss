@@ -13,6 +13,7 @@ body {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
+  align-items: center;
 }
 
 .index_page {
@@ -38,8 +39,7 @@ body {
   flex-direction: row;
   -webkit-align-content: center;
   align-content: center;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   -webkit-align-content: flex-start;
   align-content: flex-start;
 }
@@ -57,8 +57,7 @@ body {
 .index_page section:nth-child(2) {
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   -webkit-flex-direction: column;
   flex-direction: column;
   -webkit-justify-content: space-between;
@@ -79,8 +78,7 @@ body {
   height: 100%;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   align-items: center;
   justify-content: center;
@@ -89,7 +87,7 @@ body {
 }
 
 .index_page section:nth-child(2) article img {
-  width:  100%;
+  width: 100%;
 }
 
 .index_page section:nth-child(2) article h2 {
@@ -97,12 +95,12 @@ body {
   font-family: $communityFont;
   font-weight: bold;
   margin-top: 0.2em;
-  margin-bottom: 0;
+  margin-bottom: 0.3em;
  }
 
 .index_page section:nth-child(2) article p {
-  margin-top: 0.3em;
   margin-bottom: 0;
+  margin-top: 0;
   text-align: center;
   font-size: 1.5em;
   font-family: $communityFont;
@@ -125,7 +123,7 @@ body {
 .index_page section:last-child {
   display: flex;
   flex-direction: row;
-  margin-bottom: 3em;
+  flex-wrap: nowrap;
 }
 
 .index_page section:last-child div:first-child {
@@ -172,23 +170,17 @@ footer {
 
 }
 
-footer section:first-child {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-footer section:first-child h2 {
+footer section h2 {
   font-size: 2em;
   margin: 0;
 }
 
-footer section:last-child {
+footer section {
   display: flex;
   flex-direction: row;
 }
 
-footer section:first-child a {
+footer section a {
   font-size: 3em;
   color: #000;
   text-decoration: none;
@@ -200,12 +192,12 @@ footer a:hover {
 }
 
 footer img {
-  width: 6em;
-  height: 6em;
-  padding: 2.5em;
+  width: 0.9em;
+  height: 0.9em;
+  padding: 0.2em;
 }
 
-@media only screen and (max-device-width: 1435px) {
+@media only screen and (max-device-width: 1445px) {
   .index_page section:first-child {
     display: -webkit-flex;
     display: flex;
@@ -215,14 +207,13 @@ footer img {
     -webkit-align-content: center;
     align-content: center;
     -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     -webkit-align-content: flex-start;
     align-content: flex-start;
   }
 
   .index_page section:first-child p {
-    background-color: rgba($color: #f1db5e, $alpha: 0.7);
-    height: 3em;
+    font-size: 2.3em;
   }
 
   .index_page section:last-child {
@@ -246,47 +237,13 @@ footer img {
   }
 }
 
-@media only screen and (max-device-width: 1024px) {
-
-  
+@media only screen and (min-device-width: 2560px) {
+  .index_page section:first-child { 
+    flex-basis: 73em;
+  }  
 }
 
 @media only screen and (max-device-width: 780px) {
-  nav ul {
-    list-style-type: none; 
-    color: #fff;
-    font-family: $communityFont;
-    display: -webkit-flex; 
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-align-items: baseline;
-    align-items: baseline;
-  }
-
-  nav input {
-    border-style: none;
-    border-bottom-style: solid;
-    background-color: $communityColor;
-  }
-
-  nav img {
-    width: 1.5em;
-    height: 1.5em;
-  }
-
-  nav ul li {
-    margin: 0.5em;
-  }
-
-  nav ul li:first-child {
-    font-size: 2em;
-  }
-
-  nav ul a {
-    color: #000;
-    text-decoration: none;
-  }
 
   .index_page section:first-child {
     display: -webkit-flex;
@@ -327,6 +284,7 @@ footer img {
     display: flex;
     -webkit-flex-basis: 40em;
     flex-basis: 40em;
+    flex-wrap: nowrap;
     -webkit-align-content: flex-end;
     align-content: flex-end;
     -webkit-flex-direction: column;
@@ -361,8 +319,8 @@ footer img {
   }
 
   footer img {
-    width: 3em;
-    height: 3em;
+    width: 1em;
+    height: 1em;
     padding: 0.5em;
     margin-bottom: 1em;
   } 

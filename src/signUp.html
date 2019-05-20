@@ -7,15 +7,21 @@
   <link rel="shortcut icon" href="img/logo/logo.png" type="image/x-icon"> 
 </head>
 <body>
-    <header>
-        <nav id="nav-main">
-          <ul>
-            <li><a href="index.html">Авиатор</a></li>
-            <li><a href="publication.html">Публикации</a></li>
-            <li class="animated bounce"><a href="signIn.html">Вход</a></li>
-          </ul>
-        </nav>
-      </header>
+  <header>
+      <nav class="menu">
+        <div class="menu__icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu__links">
+          <li><a class="menu__links-item" href="index.html">Авиатор</a></li>
+          <li><a class="menu__links-item" href="publications.html">Публикации</a></li>
+          <li><a class="menu__links-item" href="signIn.html">Вход</a></li>       
+        </ul>
+      </nav>
+  </header>
   <main class="signUp__page">
     <form>
       <h1>Регистрация</h1>
@@ -34,9 +40,10 @@
         <span class="bar"></span>
         <label>Пароль</label>
       </section>
-      <section>      
+      <section>   
+        <label>Фото</label>  
+        <br><br><br>
         <input type="file" required>
-        <label>Фото</label>
       </section>
       <button type="submit">Зарегистрироваться</button>
       <a href="signIn.html">Уже есть аккаунт?</a>
@@ -44,12 +51,7 @@
   </main> 
   <footer>
     <section>
-      <h1>Полезные ссылки:</h1>
-      <a href="https://velo161.ru" target="_blank">ВелоАС</a>
-      <a href="http://mtbstickers.ru" target="_blank">mtbstickers.ru</a>
-    </section>
-    <section>
-      <a class="animated" href="https://www.youtube.com/user/RollAllDayFF" target="_blank" ><img src="/assets/img/logo/youtube.png" alt="YTlogo" ></a>
+      <a class="animated" href="#" target="_blank" ><img src="/assets/img/logo/youtube.png" alt="YTlogo" ></a>
       <a class="animated" href="#" target="_blank"><img src="/assets/img/logo/telegram.png" alt="TELEGRAMlogo"></a>
       <a class="animated" href="#" target="_blank"><img src="/assets/img/logo/instagram.png" alt="INSTAGRAMlogo"></a>
       <a class="animated" href="https://vk.com/aviator_open" target="_blank"><img src="/assets/img/logo/vk.png" alt="VKlogo"></a>

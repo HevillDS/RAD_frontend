@@ -2,6 +2,7 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader')
 const webpack = require('webpack');
 
@@ -96,9 +97,7 @@ module.exports = {
     }
   },
   plugins: [
-    new VueLoaderPlugin(
-
-    ),
+    new VueLoaderPlugin(),
 
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].css`,
@@ -121,6 +120,11 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
+      template: `${PATHS.src}/publications.html`,
+      filename: './publications.html'
+    }),
+
+    new HtmlWebpackPlugin({
       template: `${PATHS.src}/publication.html`,
       filename: './publication.html'
     }),
@@ -140,6 +144,6 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"
-    })
+    }),  
   ]
 }
