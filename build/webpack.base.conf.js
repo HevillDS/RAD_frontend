@@ -120,13 +120,13 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: `${PATHS.src}/publications.html`,
-      filename: './publications.html'
+      template: `${PATHS.src}/articles.html`,
+      filename: './articles.html'
     }),
 
     new HtmlWebpackPlugin({
-      template: `${PATHS.src}/publication.html`,
-      filename: './publication.html'
+      template: `${PATHS.src}/article.html`,
+      filename: './article.html'
     }),
 
     new CopyWebpackPlugin([

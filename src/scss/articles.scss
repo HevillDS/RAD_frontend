@@ -1,0 +1,164 @@
+@import 'colorsAndFonts.scss';
+@import 'animate.css';
+@import 'headerAndFooter.scss';
+
+.publication__main {
+  margin-top: 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  h2 {
+    font-family: $communityFont;
+    font-weight: bold;
+    font-size: 4em;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: rgb(136, 136, 136);
+  }
+
+  p {
+    font-family: $communityFont;
+    font-weight: normal;
+    font-size: 3em;
+  }
+
+  article {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+    flex-grow: 3;
+    order: 0;
+    flex-basis: auto;
+    margin: 1em;  
+
+    section {
+      display: flex;
+      flex-direction: column;
+      margin: 0.4em;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      p {
+        font-size: 2.3em;
+        font-weight: 300;
+      }
+
+      hr {
+        border: 0;
+        height: 0; /* Firefox... */
+        box-shadow: 0 0 10px 1px #000000;
+        margin-bottom: 4em;
+      }
+
+      img {
+        width: 60%;
+      }
+    } 
+
+    .pagination {     
+      li {
+        display: inline;
+        list-style-type: none;
+        font-family: $communityFont;
+        font-size: 2em;
+        margin: 0.5em;
+      }
+
+      .active {
+        color: $communityColor;
+      }
+
+      .disabled:hover {
+        color: red;
+      }
+    }
+  }
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 1;
+    flex-grow: 2;
+    flex-basis: 56em;
+    background-color: $communityColor;
+    height: 15em;
+    margin: 2em;  
+
+    h2 {
+      font-family: $communityFont;
+      font-weight: bold;
+      font-size: 3.3em;
+      margin: 0.5em;
+    }
+
+    ul {
+      list-style-type: none; 
+      padding: 0;
+      margin: 0.2em;
+      font-family: $communityFont;
+      font-weight: normal;
+      font-size: 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;       
+      }
+    }           
+  }  
+
+@media only screen and (max-device-width: 768px) {
+  .publication__main {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    h2 {
+      font-size: 2.3em;
+    }
+
+    article {
+      display: flex;
+      align-items: center;
+      
+      section {
+        display: flex;
+        order: 1;
+
+        p {
+          font-size: 1.5em;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+    }
+    aside {
+      display: flex;
+      order: 0;
+      flex-basis: 10em;
+      margin: 0.5em;
+
+      h2 {
+        font-size: 2em;
+      }
+
+      ul {
+        li {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}
