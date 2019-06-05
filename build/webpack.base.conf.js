@@ -2,9 +2,10 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const { VueLoaderPlugin } = require('vue-loader')
 const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
 
 
 const PATHS = {
@@ -27,6 +28,11 @@ module.exports = {
     path: PATHS.dist,
     publicPath: '/'
   },
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: 'all',
+  //   },
+  // },
   module: {
     rules: [
         {
@@ -35,35 +41,25 @@ module.exports = {
           exclude: '/node_modules'
         },
         {
-          test: /\.css$/,
-          use: [
-            {
-              loader: 'css-loader',
-              options: { sourceMap: true }
-            },
-            {
-              loader: 'postcss-loader',
-              options: { sourceMap: true, config: { path: '${PATHS.src}/js/config/postcss.config.js' } }
-            },
-            MiniCssExtractPlugin.loader,
-            "style-loader"
-          ]
-        },
-        {
           test: /\.scss$/,
           use: [
             'style-loader',
+            {
+              loader: 'style-loader',
+            },            
             MiniCssExtractPlugin.loader,
             {
               loader: 'css-loader',
               options: { sourceMap: true }
-            }, {
-              loader: 'sass-loader',
-              options: { sourceMap: true }
-            }, {
+            },
+            {
               loader: 'postcss-loader',
               options: { sourceMap: true, config: { path: `${PATHS.src}/js/config/postcss.config.js`  } }
-            }
+            },
+            {
+              loader: 'sass-loader',
+              options: { sourceMap: true }
+            }, 
           ]
         },
         {
@@ -71,34 +67,19 @@ module.exports = {
           loader: 'file-loader',
         },
         {
-          test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
-          use: [
-            {
-              loader: 'url-loader'
-          }
-        ]
-        },
-        {
-          test: /\.vue$/,
-          loader: 'vue-loader',
+          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+          loader: 'file-loader',
           options: {
-            loader: {
-              scss: 'vue-style-loader!css-loader!sass-loader'
-            }
+            name: '[name].[ext]'
           }
-        },
+        }, 
       ],
 
   },
   resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.js',
-      'bxSlider': 'node_modules/bxslider/dist'
-    }
+
   },
   plugins: [
-    new VueLoaderPlugin(),
-
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].css`,
       chunkFilename: `${PATHS.assets}css/[id].css`
@@ -144,6 +125,6 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"
-    }),  
+    }), 
   ]
 }

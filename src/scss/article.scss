@@ -1,145 +1,126 @@
 @import 'colorsAndFonts.scss';
-@import 'animate.css';
 @import 'headerAndFooter.scss';
-
-
 .article__main {
-    margin-top: 5em;
+  margin-top: 5em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 1em;
+  align-items: center;
+  .article {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-bottom: 1em;
     align-items: center;
-
-    .article {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-        margin-left: 5em;
-        margin-right: 5em;
-        margin-bottom: 2em;
-
-        h1 {
-            font-family: $communityFont;
-            font-size: 6em;
-            font-weight: bold; 
-            margin: 0;
-        }
-
-        img {
-            width: 50%;
-            margin: 1em;
-        }
-    
-        p {
-            font-family: $communityFont;
-            font-size: 2.4em;
-            font-weight: normal;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-
-        .date {
-          margin-top: 1em;
-        }
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-bottom: 2em;
+    h1 {
+      font-family: $communityFont;
+      font-size: 6em;
+      font-weight: bold; 
+      margin: 0;
     }
-    
-    .commentary {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-
-        h2 {
-          font-family: $communityFont;
-          font-size: 3em;
-          font-weight: bold; 
-          margin-bottom: 0.5em;
-        }
-
-        .writeComment {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            margin-bottom: 3em;
-            align-items: center;
-                
-            textarea {
-                resize: none;
-                width: 40em;
-                height: 4em;
-            }
-
-            button {
-                width: 7em;
-                height: 2em;
-                border: 0;
-                border-radius: 0.3em;
-                margin: 0.2em;
-                font-family: $communityFont;
-                font-size: 2em;
-                text-transform: uppercase;
-                text-align: center;
-                font-weight: bold;
-                transition: .3s;
-              }
-        
-              button:hover {
-                background: rgba(0, 199, 27, 0.6);
-                box-shadow: 0 0.7em 1em rgba(46, 229 ,157 ,0.3);
-                color: white;
-                transform: translateY(0.3em);
-              }
-        
-              button:focus {
-                outline: none;
-              }
-        
-              button:last-child {
-                width: 4em;
-                height: 1.8em;
-                border: 0;
-                border-radius: 0.3em;
-                margin: 0.2em;
-                font-family: $communityFont;
-                text-transform: uppercase;
-                text-align: center;
-                font-weight: bold;
-                transition: .3s;
-        
-                a {
-                  margin: 0;
-                  text-decoration: none;
-                  color: #000;
-                  font-size: 0.7em;
-                }
-              } 
-              button:hover { background: rgb(53, 167, 110); }
-              button:active {
-                background: rgb(33,147,90);
-                box-shadow: 0 3px rgb(33,147,90) inset;
-              }
-        }
-    
-        .comments {
-            h3 {
-                font-family: $communityFont;
-                font-size: 2em;
-                font-weight: bold;
-                margin-bottom: 0;
-                margin-top: 0;
-            }
-
-            p {
-                font-family: $communityFont;
-                font-size: 1.7em;
-                font-weight: 300;
-                margin-top: 0.3em;
-            }
-        }
+    img {
+      width: 50%;
+      margin: 1em;
     }
+    p {
+      font-family: $communityFont;
+      font-size: 2.4em;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .date {
+      margin-top: 1em;
+    }
+  }
+  .commentary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    h2 {
+      font-family: $communityFont;
+      font-size: 3em;
+      font-weight: bold; 
+      margin-bottom: 0.5em;
+    }
+    .writeComment {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin-bottom: 3em;
+      align-items: center;
+      textarea {
+        resize: none;
+        width: 40em;
+        height: 4em;
+      }
+      button {
+        width: 7em;
+        height: 2em;
+        border: 0;
+        border-radius: 0.3em;
+        margin: 0.2em;
+        font-family: $communityFont;
+        font-size: 2em;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        transition: .3s;
+      }
+      button:hover {
+        background: rgba(0, 199, 27, 0.6);
+        box-shadow: 0 0.7em 1em rgba(46, 229 ,157 ,0.3);
+        color: white;
+        transform: translateY(0.3em);
+      }
+      button:focus {
+        outline: none;
+      }
+      button:last-child {
+        width: 4em;
+        height: 1.8em;
+        border: 0;
+        border-radius: 0.3em;
+        margin: 0.2em;
+        font-family: $communityFont;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        transition: .3s;   
+        a {
+          margin: 0;
+          text-decoration: none;
+          color: #000;
+          font-size: 0.7em;
+        }
+      } 
+      button:hover { background: rgb(53, 167, 110); }
+      button:active {
+        background: rgb(33,147,90);
+        box-shadow: 0 3px rgb(33,147,90) inset;
+      }
+    }
+    .comments {
+      h3 {
+        font-family: $communityFont;
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+      p {
+        font-family: $communityFont;
+        font-size: 1.7em;
+        font-weight: 300;
+        margin-top: 0.3em;
+      }
+    }
+  }
 }
 
 @media only screen and (max-device-width: 768px) {
@@ -150,54 +131,46 @@
       margin-right: 1em;
       margin-bottom: 1em;
       height: auto;
-
       h1 {
-          font-family: $communityFont;
-          font-size: 3em;
-          font-weight: bold; 
-          margin: 0;
+        font-family: $communityFont;
+        font-size: 3em;
+        font-weight: bold; 
+        margin: 0;
       }
-
-
       img {
-          width: 80%;
-          margin: 1em;
-      }
-  
+        width: 80%;
+        margin: 1em;
+      } 
       p {
-          font-family: $communityFont;
-          font-size: 1.7em;
-          font-weight: normal;
-          margin-top: 0;
-          margin-bottom: 0;
+        font-family: $communityFont;
+        font-size: 1.7em;
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: 0;
       }
-
       .date {
         margin-top: 1em;
       }
     }
-
     .commentary {
-      display: flex;  
-
+      display: flex;
       h2 {
         font-family: $communityFont;
         font-size: 3em;
         font-weight: bold; 
         margin-bottom: 1em;
       }
-
       .writeComment {
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: column;
-          margin-bottom: 3em;
-              
-          textarea {
-              resize: none;
-              width: 20em;
-              height: 4em;
-          }
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-bottom: 3em;
+            
+        textarea {
+          resize: none;
+          width: 20em;
+          height: 4em;
+        }
       }
     }
   }

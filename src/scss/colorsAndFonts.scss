@@ -1,7 +1,5 @@
 $communityColor: #f1db5e;
-
 $communityFont: 'Yanone Kaffeesatz';
-
 @font-face {
   font-family: 'Yanone Kaffeesatz';
   src: url('../fonts/Yanone_Kaffeesatz/Regular/YanoneKaffeesatz-Regular.woff2') format('woff2'),
@@ -9,7 +7,6 @@ $communityFont: 'Yanone Kaffeesatz';
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Yanone Kaffeesatz';
   src: url('../fonts/Yanone_Kaffeesatz/Bold/YanoneKaffeesatz-Bold.woff2') format('woff2'),
@@ -17,7 +14,6 @@ $communityFont: 'Yanone Kaffeesatz';
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Yanone Kaffeesatz';
   src:url('../fonts/Yanone_Kaffeesatz/Light/YanoneKaffeesatz-Light.woff2') format('woff2'),
@@ -25,4 +21,3 @@ $communityFont: 'Yanone Kaffeesatz';
   font-weight: 300;
   font-style: normal;
 }
-

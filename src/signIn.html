@@ -23,27 +23,19 @@
       </nav>
     </header>
   <main class="signIn__page">
-      <h1>Авторизация</h1>
-      <form method="POST">
-          <section>      
-            <input type="text" required>
-            <span class="bar"></span>
-            <label>Логин</label>
-          </section>
-          <section>      
-            <input type="password" required>
-            <span class="bar"></span>
-            <label>Пароль</label>
-          </section>
-          <button type="submit" class="login">Войти</button>
-          <button type="submit" class="noAccount"><a href="signUp.html"> Нет аккаунта?</a></button>
-        </form>   
-      <!-- <form action="be.php" method="post">
-          <input type="text" name="login" placeholder="ЛОГИН" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
-          <input type="password" name="password" placeholder="ПАРОЛЬ" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
-          <a href="signUp.html">Нет Аккаунта?</a>
-          <input type="submit" name="vhod" required>     
-        </form> -->
+    <h1>Авторизация</h1>
+    <form method="POST">
+        <section>
+          <label>Логин</label>
+          <input type="text" required>
+        </section>
+        <section>
+          <label>Пароль</label>
+          <input type="password" required>
+        </section>
+        <button type="submit" class="login">Войти</button>
+        <button type="submit"><a href="signUp.html">Нет аккаунта?</a></button>
+      </form>
   </main>
   <footer>
     <section>
