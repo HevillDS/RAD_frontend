@@ -67,7 +67,7 @@ module.exports = {
           loader: 'file-loader',
         },
         {
-          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+          test: /\.(woff(2)?)/,
           loader: 'file-loader',
           options: {
             name: '[name].[ext]'
@@ -108,6 +108,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: `${PATHS.src}/article.html`,
       filename: './article.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: `${PATHS.src}/spots.html`,
+      filename: './spots.html'
     }),
 
     new CopyWebpackPlugin([

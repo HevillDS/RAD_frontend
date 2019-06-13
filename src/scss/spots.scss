@@ -1,0 +1,50 @@
+@import 'animate.min.scss';
+@import 'colorsAndFonts.scss';
+@import 'headerAndFooter.scss';
+
+.spots_page {
+    display: flex;
+    margin-top: 4.4em;
+    article {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            font-family: $communityFont;
+            font-weight: bold;
+            font-size: 7em;
+            margin: 0;
+        }
+        section {
+            h2 {
+                font-family: $communityFont;
+                font-size: 3em;
+                margin-top: 0.4em;
+                margin-bottom: 0.3em;
+
+            }
+                p {
+                    font-family: $communityFont;
+                    font-weight: normal;
+                    font-size: 2em;
+                    margin: 0;
+                }
+            }
+    }
+}
+
+@media only screen and (max-device-width: 1024px) {
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1em;
+    }
+    iframe {
+        width: 80%
+    }
+  }

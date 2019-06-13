@@ -1,5 +1,11 @@
 $communityColor: #f1db5e;
 $communityFont: 'Yanone Kaffeesatz';
+
+@mixin text {
+  font-family: $communityFont;
+}
+
+
 @font-face {
   font-family: 'Yanone Kaffeesatz';
   src: url('../fonts/Yanone_Kaffeesatz/Regular/YanoneKaffeesatz-Regular.woff2') format('woff2'),

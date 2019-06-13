@@ -3,8 +3,11 @@ form {
   flex-direction: column;
   justify-content: space-around; 
   align-items: center;
-  margin-bottom: 4em;
-  section {
+  margin-bottom: 0;
+  div {
+    &:last-child {
+      margin-bottom: 0;
+    }
     position: relative;
     margin-bottom: 2em;
     margin-left: 0;
@@ -27,7 +30,7 @@ form {
       font-size: 2em;
     }
   }
-  section:last-child {
+  div:last-child {
     display: flex;
     flex-direction: column;
   }
@@ -38,7 +41,7 @@ form {
     border-radius: 0.3em;
     margin: 0.2em;
     font-family: $communityFont;
-    font-size: 2em;
+    font-size: 1.5em;
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
@@ -67,7 +70,7 @@ form {
 @media only screen and (max-device-width: 411px) {
   form {
     margin-bottom: 2em;
-    section {
+    div {
       input {
         width: 10em;
       }

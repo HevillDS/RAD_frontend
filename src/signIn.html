@@ -25,16 +25,26 @@
   <main class="signIn__page">
     <h1>Авторизация</h1>
     <form method="POST">
-        <section>
+        <div>
           <label>Логин</label>
           <input type="text" required>
-        </section>
-        <section>
+        </div>
+        <div>
           <label>Пароль</label>
           <input type="password" required>
-        </section>
+        </div>
         <button type="submit" class="login">Войти</button>
-        <button type="submit"><a href="signUp.html">Нет аккаунта?</a></button>
+        <p>ИЛИ</p>
+        <script src="https://vk.com/js/api/openapi.js?160"></script>
+<script>
+  VK.init({apiId: 7017969});
+</script>
+
+<!-- VK Widget -->
+<div id="vk_auth"></div>
+<script>
+  VK.Widgets.Auth("vk_auth", {"authUrl":"/dev/Login"});
+</script>
       </form>
   </main>
   <footer>

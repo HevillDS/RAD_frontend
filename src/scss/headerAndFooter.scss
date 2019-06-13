@@ -134,7 +134,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  section {
+  div {
     h2 {
       font-size: 2em;
       margin: 0;
@@ -152,33 +152,25 @@ footer {
     text-decoration: none;
   }
   img {
-    width: 0.9em;
-    height: 0.9em;
+    width: 0.8em;
+    height: 0.8em;
     padding: 0.2em;
   }
 }
 
 @media only screen and (max-device-width: 620px) {
   footer {
-    section {
-      &:first-child {
-        h2 {
-          font-size: 1em;
-          margin: 0;
-        }
-        a {
-          font-size: 2em;
-          color: #000;
-          text-decoration: none;
-        }
-      }
-      &:last-child {
-        margin-top: 1em;
+    div {
+      margin-top: 1em;
+      a {
+        font-size: 2em;
+        color: #000;
+        text-decoration: none;
       }
     }
     img {
-      width: 1em;
-      height: 1em;
+      width: 0.8em;
+      height: 0.8em;
       padding: 0.5em;
       margin-bottom: 1em;
     }

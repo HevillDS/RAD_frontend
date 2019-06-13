@@ -16,7 +16,7 @@ body {
 }
 
 .index_page {
-  margin-top: 3em;
+  margin-top: 4em;
   display: -webkit-flex;
   display: flex;
   font-family: $communityFont;
@@ -28,26 +28,58 @@ body {
   }
   section {
     &:first-child {
-      display: -webkit-flex;
       display: flex;
-      -webkit-flex-basis: 55em;
-      flex-basis: 55em;
-      -webkit-flex-direction: row;
-      flex-direction: row;
-      -webkit-align-content: center;
-      align-content: center;
-      flex-wrap: nowrap;
-      -webkit-align-content: flex-start;
-      align-content: flex-start;
-      p {
-        position: absolute;
-        font-size: 3em;
-        border-radius: 0.2em;
-        padding: 1.4em;
-        margin-left: 0.3em;
-        height: 10em;
-        width: 15em;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2em;
+       /* margin-bottom: 5em; */
+      h2 {
+        font-size: 4em;
+        margin-top: 0.11em;
+        margin-bottom: 0.4em;
+        font-family: $communityFont;
+        font-weight: bold;
       }
+      div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 1em;
+        margin-right: 1em;
+        p {
+          display: flex;
+          order: 0;
+          align-self: center;
+          font-size: 2.5em;
+          width: 20em;
+          margin: 0;
+        }
+        img {
+          display: flex;
+          order: 1;
+          width: 40%;
+          margin: 0.2em;
+        }
+      }
+
+      .down {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.4em;
+
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        img {
+          width: 90%;
+        }
+      }
+    
+      
     }
     &:nth-child(2) {
       display: -webkit-flex;
@@ -61,6 +93,9 @@ body {
       -webkit-align-items: center;
       align-items: center;
       align-content: center;
+       #point {
+        margin-bottom: 6em;
+      }
       h2 {
         margin-top: 0;
       }
@@ -105,39 +140,39 @@ body {
         font-size: 6.8em;
       }
     }
-    &:last-child {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      div {
-        &:first-child {
-          background-color: #f1db5e;
-          display: flex;
-          flex-grow: 1;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          h2 {
-            font-size: 5em;
-          }
-          p {
-            margin-top: 0;
-            font-size: 2.6em;
-            text-align: center;
-            font-weight: 300;
-          }
+  }
+  .join {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    div {
+      &:first-child {
+        background-color: #f1db5e;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2 {
+          font-size: 5em;
         }
-        &:last-child {
-          display: flex;
-          flex-grow: 1;
-          img {
-            width: 60em;
-            height: 29em;
-          }
-          ul {
-            padding: 0;
-            margin: 0;
-          }
+        p {
+          margin-top: 0;
+          font-size: 2.6em;
+          text-align: center;
+          font-weight: 300;
+        }
+      }
+      &:last-child {
+        display: flex;
+        flex-grow: 1;
+        img {
+          width: 60em;
+          height: 29em;
+        }
+        ul {
+          padding: 0;
+          margin: 0;
         }
       }
     }
@@ -148,9 +183,15 @@ body {
 @media only screen and (min-device-width: 2560px) {
   .index_page section { 
     &:first-child {
-      flex-basis: 73em;
+      margin-top: 5em;
+      h2 {
+        font-size: 5.5em;
+      }
       p {
         font-size: 4.5em;
+      }
+      .details {
+        margin-top: 8em;
       }
     }  
   }
@@ -158,28 +199,17 @@ body {
 
 /* For Notebooks */
 @media only screen and (max-device-width: 1445px) {
-  .index_page section {
-    &:first-child {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-preferred-size: 45em;
-      flex-basis: 40em;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      -ms-flex-line-pack: center;
-      align-content: center;
-      -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-      -ms-flex-line-pack: start;
-      align-content: flex-start; 
-      p {
-        font-size: 2.3em; 
+  .index_page {
+    section {
+      &:first-child {
+        display: flex;
+        p {
+          margin-top: 2.8em;
+          font-size: 2.3em; 
+        }
       }
     }
-    &:last-child {
+    .join {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -187,18 +217,15 @@ body {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column; 
-
         div {
           &:first-child {
           h2 {
             font-size: 2.2em; 
           }
-
           p {
             font-size: 2em; 
           }
         }
-
         &:last-child {
           img {
             width: 100%;
@@ -210,28 +237,29 @@ body {
   }
 }
 
+
 /* For iPad Pro */
 @media only screen and (max-device-width: 1024px) {
-  .index_page section {
-    &:first-child {
-      display: -webkit-flex;
-      display: flex;
-      flex-basis: 30em;
-      -webkit-flex-direction: row;
-      flex-direction: row;
-      -webkit-align-content: center;
-      align-content: center;
-      -webkit-flex-wrap: wrap;
-      flex-wrap: nowrap;
-      -webkit-align-content: flex-start;
-      align-content: flex-start;
-      p {
-        font-size: 2.3em;
-        background: rgba(#f1db5e, 0.5);
-        height: 7em;
+  .index_page {
+    margin-top: 3em;
+    section {
+      &:first-child {
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        div {
+          display: flex;
+          flex-direction: column;
+          p {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 1em;
+            width: 12em;
+          }
+        }
       }
     }
-    &:last-child {
+    .join {
       display: flex;
       flex-direction: column;
       div {
@@ -254,87 +282,124 @@ body {
 
 /* For iPad */
 @media only screen and (max-device-width: 768px) {
-  .index_page section:first-child {
-    display: -webkit-flex;
-    display: flex;
-    flex-basis: 39em;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    justify-content: center;
-    p {
-      background-color: rgba($color: #f1db5e, $alpha: 0.0);
-      margin-top: 12em;
-      font-size: 2em;
-      padding: 0;
+  .index_page {
+    section {
+      &:first-child {
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        div {
+          display: flex;
+          flex-direction: column;
+          p {
+            display: flex;
+            order: 1;
+            font-size: 1.6em;
+            text-align: center;
+            width: 17em;
+            margin-bottom: 0.9em;
+          }
+        }
+       
+      }
+      &:nth-child(2) {
+        h1 {
+          font-size: 3em;
+        }
+        article {
+          h2 {
+            font-size: 1em;
+          }
+        }
+      }
     }
   }
 }
+
 /* For Phones */
-@media only screen and (max-device-width: 414px) {
+@media only screen and (max-device-width: 420px) {
   .index_page {
-    section:first-child {
-      display: -webkit-flex;
-      display: flex;
-      flex-basis: 23em;
-      -webkit-flex-direction: row;
-      flex-direction: row;
-      justify-content: center;
-    }
-    h1 {
-      font-size: 2.2em;
-    }
+    margin-top: 3em;
     section {
-      &:first-child p {
-        background-color: rgba($color: #f1db5e, $alpha: 0.0);
-        margin-top: 10em;
-        font-size: 1.3em;
-        padding: 0;
-      }
-      &:nth-child(2) article {
-        margin-bottom: 0.5em;
-        p {
-          font-size: 1em;
-        }
-        h2 {
-          font-size: 1.3em;
-        }
-      }
-      &:last-child {
+      &:first-child {
         display: -webkit-flex;
         display: flex;
-        -webkit-flex-basis: 40em;
-        flex-basis: 40em;
-        flex-wrap: nowrap;
-        -webkit-align-content: flex-end;
-        align-content: flex-end;
-        -webkit-flex-direction: column;
         flex-direction: column;
-        -webkit-justify-content: space-around;
-        justify-content: space-around;
-        p {
-          margin: 0.7em;
-          font-size: 1em;
-          text-align: center;
-          display: -webkit-flex;
-          display: flex;
-          align-items: flex-end;
+        h2 {
+          font-size: 2.2em;
         }
+        div {
+          p {
+            font-size: 1em;
+            padding: 0;
+            width: 14em;
+          }
+          img {
+            width: 72%;
+          }
+        }
+
+      }
+      &:nth-child(2) {
+        h1 {
+          font-size: 2.2em;
+        }
+        article {
+          margin-bottom: 0.5em;
+          p {
+            font-size: 1em;
+          }
+          h2 {
+            font-size: 1.3em;
+          }
+        }
+      }
+    }
+    .join {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-basis: 40em;
+      flex-basis: 40em;
+      flex-wrap: nowrap;
+      -webkit-align-content: flex-end;
+      align-content: flex-end;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: space-around;
+      justify-content: space-around;
+      p {
+        margin: 0.7em;
+        font-size: 1em;
+        text-align: center;
+        display: -webkit-flex;
+        display: flex;
+        align-items: flex-end;
       }
     }
   }
 }
 /*For iPhone 5/SE*/
-@media only screen and (max-device-width: 320px) {
-  .index_page section {
-    &:first-child {
-        display: -webkit-flex;
-        display: flex;
-        flex-basis: 20em;
-      p {
-      background-color: rgba($color: #f1db5e, $alpha: 0.0);
-      margin-top: 10em;
-      font-size: 1.1em;
-      padding: 0;
+@media only screen and (max-device-width: 360px) {
+  .index_page {
+    margin-top: 2em;
+    section {
+      &:first-child {
+          display: -webkit-flex;
+          display: flex;
+          div {
+            h2 {
+              font-size: 1em
+            }
+            p {
+            font-size: 1.1em;
+            padding: 0;
+            }
+          }
+      }
+      &:nth-child(2) {
+        h1 {
+          margin-top: 0.5em;
+        }
       }
     }
   }
