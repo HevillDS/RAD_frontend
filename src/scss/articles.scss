@@ -7,8 +7,10 @@
   justify-content: center;
   h2 {
     font-family: $communityFont;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 4em;
+    margin-bottom: 0.2em;
+    margin-top: 0.3em;
   }
   a {
     text-decoration: none;
@@ -31,15 +33,30 @@
     order: 0;
     flex-basis: auto;
     margin: 1em;
+    h1 {
+      font-family: $communityFont;
+      align-self: center;
+      margin-top: 0.3em;
+      margin-bottom: 0;
+      font-size: 6em;
+      
+    }
     section {
       display: flex;
       flex-direction: column;
-      margin: 0.4em;
+      margin: 1em;
       flex-wrap: wrap;
       justify-content: center;
+      border-bottom: 1px solid;
       p {
         font-size: 2.3em;
         font-weight: 300;
+        margin-bottom: 0.3em;
+        margin-top: 0.5em;
+      }
+
+      .continue {
+        margin-top: 0;
       }
       
       img {
@@ -102,17 +119,25 @@
     flex-direction: column;
     justify-content: center; 
     h2 {
-      font-size: 2.3em;
+      font-size: 1.8em;
+      margin-top: 1.5em;
     }
     article {
       display: flex;
       align-items: center;
+      margin-top: 2em;
+      h1 {
+        font-size: 3em;
+        margin-top: 0;
+      }
       section {
         display: flex;
+        margin: 0;
         order: 1;
         p {
           font-size: 1.5em;
         }
+
         img {
           width: 100%;
         }
@@ -120,14 +145,16 @@
     }
     aside {
       display: flex;
+      justify-content: space-around;
       order: 0;
       flex-basis: 10em;
       margin: 0.5em;
       h2 {
         font-size: 2em;
+        margin-bottom: 0;
       }
-      
       ul {
+        margin-top: 0.2em;
         li {
           font-size: 0.8em;
         }

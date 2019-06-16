@@ -25,14 +25,21 @@
       </header>
   <main class="articles__main">
     <aside>
-      <h2>Категории</h2>
-      <ul>
-        <li><a href="#">Обучающие</a></li>
-        <li><a href="#">Путешествия</a></li>
-        <li><a href="#">Новости</a></li>
-      </ul>
-    </aside>
+        <!-- <select onchange="with (this) if (selectedIndex) location = options [selectedIndex].value">
+            <option value="">Категории</option>
+            <option value="">Путешествия</option>
+            <option value="">Обучающие</option>
+            <option value="">Новости</option>
+           </select> -->
+        <h2>Категории</h2>
+        <ul>
+          <li><a href="#">Обучающие</a></li>
+          <li><a href="#">Путешествия</a></li>
+          <li><a href="#">Новости</a></li>
+        </ul>
+      </aside>
     <article>
+      <h1 id="point">Статьи</h1>
       <section>
         <h2><a href="article.html">Specialized представили свою новую раму</a></h2>   
         <img src="/assets/img/publication/publication.jpg" alt="">
@@ -41,47 +48,45 @@
           ate obcaecati at, iure ducimus odit provident officia recusandae eius autem sapiente labore vero qui. Natus.
           ate obcaecati at, iure ducimusc
         </p>
-        <p>
+        <p class="continue">
           <a href="article.html"><b>Продолжение</b></a>
         </p>
         <hr>
       </section>
 
       <section>
-        <h2><a href="article.html">Specialized представили свою новую раму</a></h2>   
-        <img src="/assets/img/publication/publication.jpg" alt="">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laboriosam cupiditate fuga quam numquam volupt
-          ate obcaecati at, iure ducimus odit provident officia recusandae eius autem sapiente labore vero qui. Natus.
-          ate obcaecati at, iure ducimusc
-        </p>
-        <p>
-          <a href="article.html"><b>Продолжение</b></a>
-        </p>
-        <hr>
-      </section><section>
-        <h2><a href="article.html">Specialized представили свою новую раму</a></h2>   
-        <img src="/assets/img/publication/publication.jpg" alt="">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laboriosam cupiditate fuga quam numquam volupt
-          ate obcaecati at, iure ducimus odit provident officia recusandae eius autem sapiente labore vero qui. Natus.
-          ate obcaecati at, iure ducimusc
-        </p>
-        <p>
-          <a href="article.html"><b>Продолжение</b></a>
-        </p>
-        <hr>
-      </section>
+          <h2><a href="article.html">Specialized представили свою новую раму</a></h2>   
+          <img src="/assets/img/publication/publication.jpg" alt="">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laboriosam cupiditate fuga quam numquam volupt
+            ate obcaecati at, iure ducimus odit provident officia recusandae eius autem sapiente labore vero qui. Natus.
+            ate obcaecati at, iure ducimusc
+          </p>
+          <p class="continue">
+            <a href="article.html"><b>Продолжение</b></a>
+          </p>
+          <hr>
+        </section>
+        <section>
+            <h2><a href="article.html">Specialized представили свою новую раму</a></h2>   
+            <img src="/assets/img/publication/publication.jpg" alt="">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laboriosam cupiditate fuga quam numquam volupt
+              ate obcaecati at, iure ducimus odit provident officia recusandae eius autem sapiente labore vero qui. Natus.
+              ate obcaecati at, iure ducimusc
+            </p>
+            <p class="continue">
+              <a href="article.html"><b>Продолжение</b></a>
+            </p>
+            <hr>
+          </section>
       
       <ul class="pagination">
         <li><a href="/site/article?page=1&amp;per-page=2" data-page="0">1</a></li>
         <li class="active"><a href="/site/article?page=2&amp;per-page=2" data-page="1">2</a></li>
-      </ul>      
+      </ul>
     </article>
-
-
   </main>
-
   <footer>
     <section>
       <a class="animated" href="#" target="_blank" ><img src="/assets/img/logo/youtube.png" alt="YTlogo" ></a>
